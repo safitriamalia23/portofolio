@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    background: black;
+    z-index: 999;
+}
+
+.nav-container{
+    width: 100%;
+   padding: 0 30px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+     margin-right: auto;
+}
+
+.logo span{
+     color: #00ff88;
+    text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
+}
+
+.nav-container .links{
+    display: flex;
+    margin-left: auto;
+     margin-right: 50px; 
+}
+
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+}
+
+.nav-container .links a::before{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #077b32;
+    transition: 0.3s;
+}
+
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+
+.nav-container .links a:hover{
+    color: #077b32;
+}
+
+/* DROPDOWN NORMAL (ATAS) */
+.dropdown{
+    position: absolute;
+    top: 10vh; /* pas di bawah navbar */
+    left: 0;
+    width: 100%;
+
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(4px);
+
+    transform: translateY(-200%);
+    transition: 0.3s ease;
+    z-index: 999;
+}
+
+.dropdown.active{
+    transform: translateY(0);
+}
+
+/* LINK */
+.dropdown .links a{
+    display: block;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.dropdown .links a:hover{
+    background: #077b32;
+}
+
+/* HERO */
+section{
+     width: 100%;
+      min-height: 100vh; 
+     padding: 120px 30px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+     scroll-snap-align: start;
+      transition: all 0.5s ease;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    min-height: 90vh;
+    padding: 40px;
+}
+
+/* IMAGE */
+.main-container .image{
+    width: 500px;
+    height: 80vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px #077b32;
+}
+
+.main-container .image img{
+    width: 100%;
+}
+
+.main-container .content{
+    width: 40%;
+}
+
+.content h1 span{
+    color: #077b32;
+     margin-bottom: 15px;
+}
+
+.content .typewriter{
+    font-size: 2rem;
+    font-weight: 600;
+     margin-bottom: 15px;
+}
+
+.content .typewriter-text{
+    color: #077b32;
+}
+
+.content p{
+    margin: 15px 0 20px;
+    line-height: 1.6;
+}
+
+/* SOCIAL */
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid #077b32;
+    border-radius: 50%;
+    color: #077b32;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.social-links i:hover{
+    background: #077b32;
+    color: black;
+}
+
+/* BUTTON WRAPPER */
+.btn{
+    margin-top: 20px;
+}
+
+/* BUTTON */
+.btn button{
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: 2px solid #077b32;
+    background: transparent;
+    color: #077b32;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+.social-links{
+    margin-top: 15px;
+}
+
+/* HOVER */
+.btn button:hover{
+    background: #077b32;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* SECTION */
+.cert-section{
+    text-align: center;
+    padding: 80px 10%;
+}
+#cert h2{
+    margin-bottom: 40px;
+}
+
+/* SKILLS */
+.skills-container{
+    max-width: 600px;
+    margin: auto;
+    margin-top: 30px;
+}
+.skill-item{
+    margin: 20px 0;
+}
+
+.skill-bar{
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skill-fill{
+    height: 10px;
+    width: 0;
+    background: #38bdf8;
+    transition: 2s;
+}
+
+
+
+/* STOP SAAT HOVER */
+.slider-track:hover{
+    animation-play-state: paused;
+}
+
+.slider-wrapper{
+    overflow: hidden;
+    width: 100%;
+    margin-top: 40px;
+      position: relative;
+       max-height: 350px;
+}
+
+/* TRACK */
+.slider-track{
+    display: flex;
+    gap: 25px;
+    width: max-content;
+    animation: certSlide 35s linear infinite;
+}
+
+
+.cert-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+     pointer-events: none;
+}
+
+/* HOVER EFFECT */
+.cert-card:hover{
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,255,136,0.3);
+}
+
+
+.cert-card:hover img{
+    transform: scale(1.1);
+}
+
+/* LINK FULL AREA */
+.cert-card a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .main-container{
+        flex-direction: column;
+    }
+
+    .main-container .content{
+        width: 90%;
+    }
+
+    .main-container .image{
+        width: 250px;
+        height: 250px;
+    }
+}
+/* PASTIKAN CARD BISA DIHOVER */
+.cert-card{
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+     width: 280px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s ease;
+}
+
+
+/* PASTIKAN IMG NANGKEP HOVER */
+.cert-card img{
+    display: block;
+    pointer-events: none;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* INFO */
+.cert-info{
+    padding: 15px;
+    text-align: left;
+    background: rgba(0,0,0,0.6);
+}
+
+.cert-info h3{
+    font-size: 15px;
+    color: #00ff88;
+    margin-bottom: 5px;
+}
+
+.cert-info p{
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* HOVER EFFECT */
+.cert-card:hover{
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(7,123,50,0.6);
+}
+
+/* ANIMASI */
+@keyframes certSlide{
+    0%{ transform: translateX(0); }
+    100%{ transform: translateX(-50%); }
+}
+/* ZOOM */
+.cert-card:hover img{
+    transform: scale(1.1);
+}
+
+/* PROJECT */
+.project-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.project-card{
+    width: 260px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    background: rgba(255,255,255,0.05);
+    transition: 0.3s ease;
+    display: block;
+}
+
+/* GAMBAR */
+.project-card img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+/* INFO */
+.project-info{
+    padding: 15px;
+    text-align: left;
+}
+
+.project-info h3{
+    margin-bottom: 5px;
+    color: #077b32;
+}
+
+.project-info p{
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* HOVER EFFECT */
+.project-card:hover{
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(7,123,50,0.5);
+}
+
+.project-card:hover img{
+    transform: scale(1.1);
+}
+#home{ background: black; }
+#about{ background: #0a0a0a; }
+#skills{ background: #050505; }
+#project{ background: #0a0a0a; }
+#cert{ background: #050505; }
+#contact{ background: #0a0a0a; }
+#contact{
+    height: 120vh; /* lebih besar dari yang lain */
+    background: linear-gradient(to top, #000000, #022e14);
+    border-top: 2px solid #077b32;
+}
+
+#contact h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+
+#contact p{
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+#about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* ngatur jarak judul & deskripsi */
+    padding-top: 80px; /* kecilin dari 120px */
+}
+
+#about h2{
+    margin-bottom: 5px;
+}
+.about-box{
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 700px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,255,136,0.1);
+}
+
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about-left, .about-right{
+    width: 50%;
+}
+
+.about-left h2,
+.about-right h2{
+    margin-bottom: 15px;
+}
+
+.about-left p{
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* EDUCATION STYLE */
+.edu-item{
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 3px solid #077b32;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+}
+
+.edu-item h3{
+    color: #077b32;
+    margin-bottom: 5px;
+}
+
+.edu-item span{
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.edu-item p{
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+@media(max-width:768px){
+    .about-container{
+        flex-direction: column;
+    }
+
+    .about-left, .about-right{
+        width: 100%;
+    }
+}
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.skill-column{
+    width: 100%;
+    padding: 30px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 15px;
+}
+
+.skill-column h3{
+    margin-bottom: 25px;
+    color: #00ff88;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.skill-item{
+    margin: 15px 0;
+}
+.skill-item span{
+    font-size: 1.1rem;
+}
+
+.skill-bar{
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+     height: 10px;
+}
+
+.skill-fill{
+    height: 8px;
+    width: 0;
+    background: #38bdf8;
+    transition: 2s;
+}
+
+#skills{
+    padding: 120px 5%;
+}
+@media(max-width:768px){
+    .skills-grid{
+        flex-direction: column;
+        align-items: center;
+        grid-template-columns: 1fr;
+    }
+}
+.cert-section .btn{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+     position: relative;
+    z-index: 5;
+}
+#cert{
+    height: auto !important;
+    padding-bottom: 100px;
+     justify-content: flex-start;
+     overflow: hidden;
+}

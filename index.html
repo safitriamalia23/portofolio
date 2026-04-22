@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+      scroll-snap-type: y mandatory;
+}
+</style>
+<title>Safitri Portfolio</title>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="nav-container">
+        <div class="logo">My <span>Portofolio</span></div>
+
+        <div class="links">
+            <div class="link"><a href="#home">Home</a></div>
+            <div class="link"><a href="#about">About</a></div>
+            <div class="link"><a href="#skills">Skills</a></div>
+            <div class="link"><a href="#project">Project</a></div>
+            <div class="link"><a href="#cert">Certificate</a></div>
+            <div class="link"><a href="#contact">Contact</a></div>
+        </div>
+
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+
+   <div class="dropdown" onclick="closeMenu(event)">
+    <div class="links" onclick="event.stopPropagation()">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#project">Project</a>
+        <a href="#cert">Certificate</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+    <div class="main-container">
+
+        <div class="image">
+            <img src="potosaya.jpeg">
+        </div>
+
+        <div class="content">
+            <h1>Hey I'm <span>Safitri Amalia</span></h1>
+
+            <div class="typewriter">
+                I'm a <span class="typewriter-text"></span><label>|</label>
+            </div>
+
+            <p>
+                Saya siswa PKL yang fokus di Web Development dan suka membuat website modern, interaktif, dan menarik.
+            </p>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/sftramlya_?igsh=MXB6djI3OXl3OW93Ng=="><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://linktr.ee/safitriamalia23"><i class="fa-solid fa-link"></i></a>
+                <a href="https://github.com/safitriamalia23" target="_blank">
+        <i class="fa-brands fa-github"></i>
+    </a>
+            </div>
+
+            <div class="btn">
+                <a href="cv-ku.pdf" target="_blank">
+                    <button>Lihat CV</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="cert-section">
+    <div class="about-container">
+
+        <!-- KIRI (DESKRIPSI) -->
+        <div class="about-left">
+            <h2>About Me</h2>
+            <p>
+                Saya adalah siswa yang sedang mempersiapkan diri untuk mengikuti Praktik Kerja Lapangan (PKL) dengan minat di bidang Digital Marketing. Saya tertarik dalam pembuatan konten, pengelolaan media sosial, serta strategi pemasaran digital. Selain itu, saya juga memiliki dasar dalam pengembangan website menggunakan HTML, CSS, dan JavaScript.
+            </p>
+        </div>
+
+        <!-- KANAN (EDUCATION) -->
+        <div class="about-right">
+            <h2>Education</h2>
+
+            <div class="edu-item">
+                <h3>SMK Negeri 1 ciomas</h3>
+                <span>2024 - Sekarang</span>
+                <p>Pengembangan Perangkat Lunak dan Gim</p>
+            </div>
+
+            
+    </div>
+</section>
+
+<section id="skills" class="cert-section">
+    <h2>My Skills</h2>
+
+    <div class="skills-grid">
+
+        <!-- KIRI -->
+        <div class="skill-column">
+            <h3>💻 Programming</h3>
+
+            <div class="skill-item">
+                <span>HTML 80%</span>
+                <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+            </div>
+
+            <div class="skill-item">
+                <span>CSS 65%</span>
+                <div class="skill-bar"><div class="skill-fill" data-width="65%"></div></div>
+            </div>
+
+            <div class="skill-item">
+                <span>JavaScript 50%</span>
+                <div class="skill-bar"><div class="skill-fill" data-width="50%"></div></div>
+            </div>
+        </div>
+
+        <!-- TENGAH -->
+        <div class="skill-column">
+            <h3>🎨 Design</h3>
+
+            <div class="skill-item">
+                <span>Canva 90%</span>
+                <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
+            </div>
+
+            <div class="skill-item">
+                <span>Figma 65%</span>
+                <div class="skill-bar"><div class="skill-fill" data-width="65%"></div></div>
+            </div>
+
+            
+        </div>
+
+        <!-- KANAN -->
+        <div class="skill-column">
+            <h3>📱 Digital Marketing</h3>
+
+            <div class="skill-item">
+                <span>Content Creation 90%</span>
+                <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
+            </div>
+
+            <div class="skill-item">
+                <span>Social Media 85%</span>
+                <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
+            </div>
+
+            <div class="skill-item">
+                <span>Copywriting 75%</span>
+                <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PROJECT -->
+<section id="project" class="cert-section">
+    <h2>My Projects</h2>
+
+    <div class="project-container">
+
+        <a href="https://safitriamalia23.github.io/film/" target="_blank" class="project-card">
+            <img src="movie.png">
+            <div class="project-info">
+                <h3>Website Search movie</h3>
+                <p>Aplikasi web pencarian film berbasis API yang menampilkan informasi seperti judul, poster, rating, dan deskripsi secara real-time.</p>
+            </div>
+        </a>
+
+        <a href="https://safitriamalia23.github.io/resep_makanan/" target="_blank" class="project-card">
+            <img src="resep.png">
+            <div class="project-info">
+                <h3>Website Resep Makanan</h3>
+                <p>Website yang menampilkan berbagai resep makanan lengkap dengan bahan dan langkah memasak.</p>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<section id="cert" class="cert-section">
+    <h2>My Certificates</h2>
+
+    <div class="slider-wrapper">
+        <div class="slider-track">
+
+           <!-- 1 -->
+    <div class="cert-card">
+        <a href="web3 engineering.png" target="_blank">
+            <img src="web3 engineering.png">
+        </a>
+        <div class="cert-info">
+            <h3>Web3 Engineering for
+Developers: Skill, Tools, dan Peluang Karir</h3>
+            <p>DMemahami dasar blockchain, smart contract, dan pengembangan Web3</p>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="cert-card">
+        <a href="Dasar Pemrograman Web.pdf" target="_blank">
+            <img src="kelas dasar pemrograman.png">
+        </a>
+        <div class="cert-info">
+            <h3>Kelas Belajar Dasar Pemrograman Web</h3>
+            <p>Mempelajari HTML, CSS, dan struktur dasar pembuatan website</p>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="cert-card">
+        <a href="DevCoach 189_ React _ Kenalan dengan Lifecycle Component.pdf" target="_blank">
+            <img src="kenalan dengan lifecycle.png">
+        </a>
+        <div class="cert-info">
+            <h3>DevCoach 189_ React _ Kenalan dengan Lifecycle Component</h3>
+            <p>Memahami siklus hidup komponen React dalam pengembangan aplikasi</p>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="cert-card">
+        <a href="DevCoach 191_ Kotlin 101 _ Mengatasi Error Kotlin dengan Debugging.pdf" target="_blank">
+            <img src="kotlin.png">
+        </a>
+        <div class="cert-info">
+            <h3>DevCoach 191_ Kotlin 101 _ Mengatasi Error Kotlin dengan Debugging</h3>
+            <p>Belajar teknik debugging untuk mengatasi error dalam Kotlin</p>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="cert-card">
+        <a href="financial literacy.pdf" target="_blank">
+            <img src="financial literacy.png">
+        </a>
+        <div class="cert-info">
+            <h3>Kelas Introduction to Financial Literacy</h3>
+            <p>Memahami dasar pengelolaan keuangan pribadi dan perencanaan finansial</p>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="cert-card">
+        <a href="frontend.pdf" target="_blank">
+            <img src="kelas frontend.png">
+        </a>
+        <div class="cert-info">
+            <h3>Kelas Belajar front-end web untuk pemula</h3>
+            <p>Mempelajari dasar pengembangan tampilan website yang interaktif</p>
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="cert-card">
+        <a href="IDCamp x Dicoding Live #6 - Frontend vs Backend_ A Never-Ending Love- Hate Relationship.pdf" target="_blank">
+            <img src="frontend vs backend.png">
+        </a>
+        <div class="cert-info">
+            <h3>IDCamp x Dicoding Live #6 - Frontend vs Backend_ A Never-Ending Love- Hate Relationship</h3>
+            <p>Memahami perbedaan dan hubungan antara frontend dan backend</p>
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="cert-card">
+        <a href="javascript.pdf" target="_blank">
+            <img src="kelas javascript.png">
+        </a>
+        <div class="cert-info">
+            <h3>Kelas Belajar Javascript</h3>
+            <p>Mempelajari dasar JavaScript untuk membuat website interaktif</p>
+        </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="cert-card">
+        <a href="Machine Learning _ Unsupervised Learning_ Hidden Clustering & Pattern Discovery.pdf" target="_blank">
+            <img src="machine learning.png">
+        </a>
+        <div class="cert-info">
+            <h3>Machine Learning _ Unsupervised Learning_ Hidden Clustering & Pattern Discovery</h3>
+            <p>Memahami konsep clustering dan analisis pola dalam machine learning</p>
+        </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="cert-card">
+        <a href="program Pengimbasan Master Trainer 2024.pdf" target="_blank">
+            <img src="program pengimbaan master trainer 2024.png">
+        </a>
+        <div class="cert-info">
+            <h3>program Pengimbasan Master Trainer 2024</h3>
+            <p>sebagai PESERTA dalam program
+Pengimbasan Master Trainer 2024</p>
+        </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="cert-card">
+        <a href="Real-World AI Projects_ Mempersiapkan Portofolio AI yang Relevan untuk Dunia Riset Akademik & Industri (1).pdf" target="_blank">
+            <img src="mempersiapkan porto ai.png">
+        </a>
+        <div class="cert-info">
+            <h3>Real-World AI Projects_ Mempersiapkan Portofolio AI yang Relevan untuk Dunia Riset Akademik & Industri</h3>
+            <p>Hadir pada acara elevAIte x Dicoding Live #4 - Real-World AI Projects:</p>
+        </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="cert-card">
+        <a href="Sertifikat PIJI Fun Sharing_Safitri Amalia.pdf" target="_blank">
+            <img src="Sertifikat PIJI Fun Sharing.png">
+        </a>
+        <div class="cert-info">
+            <h3>Sertifikat PIJI Fun Sharing</h3>
+            <p>Berpartisipasi dalam sesi sharing untuk pengembangan wawasan digital</p>
+        </div>
+    </div>
+
+    <!--duplikat-->
+
+     <!-- 1 -->
+    <div class="cert-card">
+        <a href="web3 engineering.png" target="_blank">
+            <img src="web3 engineering.png">
+        </a>
+        <div class="cert-info">
+            <h3>Web3 Engineering for
+Developers: Skill, Tools, dan Peluang Karir</h3>
+            <p>DMemahami dasar blockchain, smart contract, dan pengembangan Web3</p>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="cert-card">
+        <a href="Dasar Pemrograman Web.pdf" target="_blank">
+            <img src="kelas dasar pemrograman.png">
+        </a>
+        <div class="cert-info">
+            <h3>Kelas Belajar Dasar Pemrograman Web</h3>
+            <p>Mempelajari HTML, CSS, dan struktur dasar pembuatan website</p>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="cert-card">
+        <a href="DevCoach 189_ React _ Kenalan dengan Lifecycle Component.pdf" target="_blank">
+            <img src="kenalan dengan lifecycle.png">
+        </a>
+        <div class="cert-info">
+            <h3>DevCoach 189_ React _ Kenalan dengan Lifecycle Component</h3>
+            <p>Memahami siklus hidup komponen React dalam pengembangan aplikasi</p>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="cert-card">
+        <a href="DevCoach 191_ Kotlin 101 _ Mengatasi Error Kotlin dengan Debugging.pdf" target="_blank">
+            <img src="kotlin.png">
+        </a>
+        <div class="cert-info">
+            <h3>DevCoach 191_ Kotlin 101 _ Mengatasi Error Kotlin dengan Debugging</h3>
+            <p>Belajar teknik debugging untuk mengatasi error dalam Kotlin</p>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="cert-card">
+        <a href="financial literacy.pdf" target="_blank">
+            <img src="financial literacy.png">
+        </a>
+        <div class="cert-info">
+            <h3>Kelas Introduction to Financial Literacy</h3>
+            <p>Memahami dasar pengelolaan keuangan pribadi dan perencanaan finansial</p>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="cert-card">
+        <a href="frontend.pdf" target="_blank">
+            <img src="kelas frontend.png">
+        </a>
+        <div class="cert-info">
+            <h3>Kelas Belajar front-end web untuk pemula</h3>
+            <p>Mempelajari dasar pengembangan tampilan website yang interaktif</p>
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="cert-card">
+        <a href="IDCamp x Dicoding Live #6 - Frontend vs Backend_ A Never-Ending Love- Hate Relationship.pdf" target="_blank">
+            <img src="frontend vs backend.png">
+        </a>
+        <div class="cert-info">
+            <h3>IDCamp x Dicoding Live #6 - Frontend vs Backend_ A Never-Ending Love- Hate Relationship</h3>
+            <p>Memahami perbedaan dan hubungan antara frontend dan backend</p>
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="cert-card">
+        <a href="javascript.pdf" target="_blank">
+            <img src="kelas javascript.png">
+        </a>
+        <div class="cert-info">
+            <h3>Kelas Belajar Javascript</h3>
+            <p>Mempelajari dasar JavaScript untuk membuat website interaktif</p>
+        </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="cert-card">
+        <a href="Machine Learning _ Unsupervised Learning_ Hidden Clustering & Pattern Discovery.pdf" target="_blank">
+            <img src="machine learning.png">
+        </a>
+        <div class="cert-info">
+            <h3>Machine Learning _ Unsupervised Learning_ Hidden Clustering & Pattern Discovery</h3>
+            <p>Memahami konsep clustering dan analisis pola dalam machine learning</p>
+        </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="cert-card">
+        <a href="program Pengimbasan Master Trainer 2024.pdf" target="_blank">
+            <img src="program pengimbaan master trainer 2024.png">
+        </a>
+        <div class="cert-info">
+            <h3>program Pengimbasan Master Trainer 2024</h3>
+            <p>sebagai PESERTA dalam program
+Pengimbasan Master Trainer 2024</p>
+        </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="cert-card">
+        <a href="Real-World AI Projects_ Mempersiapkan Portofolio AI yang Relevan untuk Dunia Riset Akademik & Industri (1).pdf" target="_blank">
+            <img src="mempersiapkan porto ai.png">
+        </a>
+        <div class="cert-info">
+            <h3>Real-World AI Projects_ Mempersiapkan Portofolio AI yang Relevan untuk Dunia Riset Akademik & Industri</h3>
+            <p>Hadir pada acara elevAIte x Dicoding Live #4 - Real-World AI Projects:</p>
+        </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="cert-card">
+        <a href="Sertifikat PIJI Fun Sharing_Safitri Amalia.pdf" target="_blank">
+            <img src="Sertifikat PIJI Fun Sharing.png">
+        </a>
+        <div class="cert-info">
+            <h3>Sertifikat PIJI Fun Sharing</h3>
+            <p>Berpartisipasi dalam sesi sharing untuk pengembangan wawasan digital</p>
+        </div>
+    </div>
+
+
+        </div> 
+</div> 
+<div class="btn">
+    <a href="https://drive.google.com/drive/folders/15R8aWGuZuBBeMHlB9GlmrCE_ylqPGj-h?usp=sharing" target="_blank">
+        <button>See All Certificates</button>
+    </a>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="cert-section">
+    <h2>Contact Me</h2>
+
+    <p>Email: safitriamalya414@gmail.com</p>
+    <p>WhatsApp: 085163523100</p>
+
+    <div class="btn">
+        <a href="https://wa.me/6285163523100" target="_blank">
+            <button>Chat Me</button>
+        </a>
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
